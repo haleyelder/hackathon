@@ -33,15 +33,6 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/invite.html',
-      filename: 'invite.html',
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true
-      }
-    }),
-
-    new HtmlWebpackPlugin({
       template: './src/familiar.html',
       filename: 'familiar.html',
       minify: {
@@ -53,6 +44,24 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/house.html',
       filename: 'house.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true
+      }
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/welcome.html',
+      filename: 'welcome.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true
+      }
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/no.html',
+      filename: 'no.html',
       minify: {
         removeComments: true,
         collapseWhitespace: true
