@@ -22,6 +22,42 @@ module.exports = {
       template: './src/index.html',
       inject: 'body'
     }),
+
+    new HtmlWebpackPlugin({
+      template: './src/name.html',
+      filename: 'name.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true
+      }
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/invite.html',
+      filename: 'invite.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true
+      }
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/familiar.html',
+      filename: 'familiar.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true
+      }
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/house.html',
+      filename: 'house.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true
+      }
+    }),
     new Dotenv()
   ],
   module: {
