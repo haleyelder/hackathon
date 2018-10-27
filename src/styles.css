@@ -1,0 +1,7 @@
+.invitation, .envelope {
+  display: none;
+}
+
+.envelope img {
+  width: 70%;
+}
