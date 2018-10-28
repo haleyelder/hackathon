@@ -7,8 +7,30 @@
   <div class="house">
     <h2>The Sorting Hat</h2>
     <p> Let's see what house you're in...</p>
-    <button onclick="sortMe()" id="sort">Sort me! </button>
+    <button onclick="sortMe()">Sort me! </button>
     <div id="house"><div>
   </div>
+
+  <script>
+    function sortMe() {
+      
+      var data = null;
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://www.potterapi.com/v1/sortingHat");
+      xhr.send(data);
+
+
+          xhr.addEventListener("readystatechange", function () {
+          if (this.readyState === 4) {
+            document.getElementById("house").innerHTML = this.responseText;
+           //$('#house').text(this.responseText)
+          }
+      });
+      }
+
+</script>
+
+
 </body>
 </html>
