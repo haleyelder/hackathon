@@ -15,25 +15,10 @@ $(document).ready(function() {
       $('.envelope').hide();
     })
   })
+
+
+
 });
 
 
 
-// sorting function! 
-
-
-function sortMe() {
-  var data = null;
-  
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://www.potterapi.com/v1/sortingHat");
-  xhr.send(data);
-  
-  
-      xhr.addEventListener("readystatechange", function () {
-      if (this.readyState === 4) {
-        $('#house').text(this.responseText)
-      }
-  });
-  }
-  

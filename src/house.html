@@ -11,5 +11,27 @@
     <button class="btn btn-danger" onclick="sortMe()" id="sort">Sort me! </button>
     <div id="house"><div>
   </div>
+
+  <script>
+    function sortMe() {
+
+      var data = null;
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://www.potterapi.com/v1/sortingHat");
+      xhr.send(data);
+
+
+          xhr.addEventListener("readystatechange", function () {
+          if (this.readyState === 4) {
+            document.getElementById("house").innerHTML = this.responseText;
+           //$('#house').text(this.responseText)
+          }
+      });
+      }
+
+</script>
+
+
 </body>
 </html>
